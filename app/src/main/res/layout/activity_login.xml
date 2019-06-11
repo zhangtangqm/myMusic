@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.LoginActivity">
+
+    <include layout="@layout/nav_bar"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/logo"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/marginSize"
+        android:layout_marginBottom="30dp"
+        />
+    <!--app表示自定义属性前面的标识-->
+    <!--<cn.edu.swufe.mymusic.views.InputView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/inputViewHeight"
+        android:layout_marginTop="@dimen/marginSize"
+        app:input_icon="@mipmap/picture_phone"
+        app:input_hint="手机号"
+        app:is_password="false"
+
+        ></cn.edu.swufe.mymusic.views.InputView>
+
+-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:layout_width="@dimen/navBarHeight"
+            android:layout_height="@dimen/navBarHeight"
+            android:src="@mipmap/picture_phone"
+
+            />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:hint="请输入用户名"
+            android:cursorVisible="false"
+            />
+    </LinearLayout>
+<View
+    style="@style/line"
+    />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:layout_width="@dimen/navBarHeight"
+            android:layout_height="@dimen/navBarHeight"
+            android:src="@mipmap/picture_suo"
+           
+            />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="请输入密码"
+            android:cursorVisible="false"
+            android:password="true"
+
+
+            />
+    </LinearLayout>
+    <View
+        style="@style/line"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/marginSize"
+        android:text="立即注册"
+        android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/infoSize"
+        android:textColor="@color/mainColor"
+        android:onClick="onRegisterClick"
+        />
+    <Button
+       style="@style/commitBtn"
+        android:text="登录"
+        />
+</LinearLayout>
