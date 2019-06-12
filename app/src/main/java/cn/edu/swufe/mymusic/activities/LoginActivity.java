@@ -1,13 +1,20 @@
 package cn.edu.swufe.mymusic.activities;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 
+import cn.edu.swufe.mymusic.MainActivity;
 import cn.edu.swufe.mymusic.R;
+import cn.edu.swufe.mymusic.utils.UserUtils;
+import cn.edu.swufe.mymusic.views.InputView;
 
-public class LoginActivity extends BaseAcitivity{
-
+public class LoginActivity extends BaseAcitivity {
+    //private InputView mInputPhone, mInputPassword;
+EditText mInputPhone;
+    EditText mInputPassword;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,13 +22,35 @@ public class LoginActivity extends BaseAcitivity{
 
         initView();
     }
+
     //初始化View
-    private void initView(){
-        initNavBar(false,"登录",false);//表示后退按钮不显示，title显示登录，“我”不显示
+    private void initView() {
+
+        initNavBar(false, "登录", false);//表示后退按钮不显示，title显示登录，“我”不显示
+
+        mInputPhone = (EditText)findViewById(R.id.input_phone);
+        mInputPassword = (EditText)findViewById (R.id.input_password);
     }
-//注册点击事件，跳转注册页面
-public void onRegisterClick(View v){
 
-}
+    //注册点击事件，跳转注册页面
+    public void onRegisterClick(View v) {
+      Intent intent =new Intent(this,RegisterActivity.class);
+      startActivity(intent);
+    }
 
+    //登录按钮的点击事件
+    public void onCommitClick(View v) {
+
+        String phone = mInputPhone.getText().toString();
+        String password = mInputPassword.getText().toString();
+
+//调用UserUtils方法,验证用户输入是否合法
+        if (!UserUtils.validateLogin(this, phone, password)) {//传入手机号和密码
+            return;
+        }
+        //如果正确跳转到MainAcitivity
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
 }
