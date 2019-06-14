@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="@dimen/navBarHeight"
     android:background="@color/mainColor"
+    android:orientation="horizontal"
     android:paddingLeft="@dimen/marginSize"
     android:paddingRight="@dimen/marginSize"
 
@@ -33,4 +34,4 @@
         android:src="@mipmap/me"
         android:layout_gravity="right|center_vertical"
         />
-</FrameLayout>
+</LinearLayout>

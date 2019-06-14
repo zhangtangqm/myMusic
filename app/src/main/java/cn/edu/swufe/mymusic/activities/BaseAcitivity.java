@@ -42,7 +42,9 @@ public class BaseAcitivity extends Activity {
             @Override
             public void onClick(View v) {
                 //跳转到个人中心页面
-                startActivity(new Intent(BaseAcitivity.this,MeActivity.class));
+                Intent intent =new Intent(BaseAcitivity.this,MeActivity.class);
+                startActivity(intent);
+
             }
         });
 
