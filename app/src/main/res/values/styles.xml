@@ -6,7 +6,20 @@
         <item name="colorPrimary">@color/mainColor</item>
         <item name="colorPrimaryDark">@color/mainColor</item>
         <item name="colorAccent">@color/mainColor</item>
+        <item name="android:windowAnimationStyle">@style/AnimationActivity</item>
     </style>
+<!--页面进入与退出的动画效果-->
+    <style name="AnimationActivity" parent="@android:style/Animation.Activity">
+    <!--  打开Activity时，新进入的activity执行的动画  -->
+    <item name="android:activityOpenEnterAnimation">@anim/open_enter</item>
+    <!--  打开Activity时，原Activity执行动画  -->
+    <item name="android:activityOpenExitAnimation">@anim/open_exit</item>
+    <!--  退出Activity时， 退出的Activity执行动画  -->
+    <item name="android:activityCloseExitAnimation">@anim/close_exit</item>
+    <!--  退出Activity时， 重新显示的Activity执行动画  -->
+    <item name="android:activityCloseEnterAnimation">@anim/close_enter</item>
+</style>
+
     <!-- 分割线 -->
     <style name="line">
         <item name="android:layout_height">1dp</item>

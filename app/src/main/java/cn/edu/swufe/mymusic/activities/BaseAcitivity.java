@@ -1,6 +1,7 @@
 package cn.edu.swufe.mymusic.activities;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.drm.DrmStore;
 import android.support.annotation.IdRes;
 import android.view.View;
@@ -36,6 +37,14 @@ public class BaseAcitivity extends Activity {
                                        }
                                    }
         );
+     //为个人中心设置点击事件
+        mIvMe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳转到个人中心页面
+                startActivity(new Intent(BaseAcitivity.this,MeActivity.class));
+            }
+        });
 
     }
 }
