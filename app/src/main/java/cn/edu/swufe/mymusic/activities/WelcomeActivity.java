@@ -9,6 +9,7 @@ import java.util.TimerTask;
 
 import cn.edu.swufe.mymusic.MainActivity;
 import cn.edu.swufe.mymusic.R;
+import cn.edu.swufe.mymusic.utils.UserUtils;
 
 public class WelcomeActivity extends BaseAcitivity {
 
@@ -23,12 +24,20 @@ public class WelcomeActivity extends BaseAcitivity {
         init();
     }
     private void init(){
+
+        final boolean isLogin=UserUtils.validateUserLogin(this);
         mTimer= new Timer();
         mTimer.schedule(new TimerTask() {
             @Override
             public void run() {
                 //toMain();
-               toLogin();
+                if(isLogin){
+                    toMain();
+                }
+                else{
+                    toLogin();
+                }
+            //   toLogin();
             }
         },3*1000);
     }

@@ -6,6 +6,7 @@
 
     <application
         android:allowBackup="true"
+        android:name=".MyApplication"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -23,7 +24,8 @@
         <activity android:name=".activities.RegisterActivity" />
         <activity android:name=".activities.MeActivity" />
         <activity android:name=".activities.ChangePasswordActivity" />
-        <activity android:name=".activities.AlbumListActivity"></activity>
+        <activity android:name=".activities.AlbumListActivity" />
+        <activity android:name=".activities.PlayMusicActivity"></activity>
     </application>
 
 </manifest>
