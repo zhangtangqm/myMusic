@@ -80,6 +80,7 @@
         android:onClick="onRegisterClick"
         />
     <Button
+        android:id="@+id/commitBtn"
        style="@style/commitBtn"
         android:text="登录"
         android:onClick="onCommitClick"

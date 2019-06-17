@@ -1,20 +1,19 @@
 package cn.edu.swufe.mymusic.activities;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 import cn.edu.swufe.mymusic.MainActivity;
 import cn.edu.swufe.mymusic.R;
-import cn.edu.swufe.mymusic.utils.UserUtils;
-import cn.edu.swufe.mymusic.views.InputView;
 
 public class LoginActivity extends BaseAcitivity {
     //private InputView mInputPhone, mInputPassword;
 EditText mInputPhone;
     EditText mInputPassword;
+    Button mcommitButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,10 +44,14 @@ EditText mInputPhone;
         String password = mInputPassword.getText().toString();
 
 //调用UserUtils方法,验证用户输入是否合法
-        if (!UserUtils.validateLogin(this, phone, password)) {//传入手机号和密码
-            return;
-        }
+       // if (!UserUtils.validateLogin(this, phone, password)) {//传入手机号和密码
+          //  return;
+       // }
         //如果正确跳转到MainAcitivity
+        mcommitButton=(Button)findViewById(R.id.commitBtn);
+
+
+
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();
