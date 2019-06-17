@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import cn.edu.swufe.mymusic.MainActivity;
 import cn.edu.swufe.mymusic.R;
+import cn.edu.swufe.mymusic.activities.BookListActivity;
 import cn.edu.swufe.mymusic.activities.LoginActivity;
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -95,7 +96,7 @@ public class BooksFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(),LoginActivity.class);
+                Intent intent = new Intent(getActivity(),BookListActivity.class);
                 startActivity(intent);
 
 

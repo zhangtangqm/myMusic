@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 
 import cn.edu.swufe.mymusic.R;
 import cn.edu.swufe.mymusic.activities.LoginActivity;
+import cn.edu.swufe.mymusic.activities.PhotoListActivity;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
@@ -85,7 +86,7 @@ public class PhotoFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(),LoginActivity.class);
+                Intent intent = new Intent(getActivity(),PhotoListActivity.class);
                 startActivity(intent);
 
 
