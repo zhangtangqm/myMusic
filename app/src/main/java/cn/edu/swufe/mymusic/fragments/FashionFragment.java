@@ -8,10 +8,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import cn.edu.swufe.mymusic.R;
-import cn.edu.swufe.mymusic.activities.LoginActivity;
+import cn.edu.swufe.mymusic.activities.FashionListActivity;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
@@ -79,7 +78,7 @@ public class FashionFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(),LoginActivity.class);
+                Intent intent = new Intent(getActivity(),FashionListActivity.class);
                 startActivity(intent);
 
 

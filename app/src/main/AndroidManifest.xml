@@ -29,7 +29,8 @@
         <activity android:name=".activities.AlbumListActivity" />
         <activity android:name=".activities.PlayMusicActivity" />
         <activity android:name=".activities.PlayerListActivity" />
-        <activity android:name=".activities.ReadActivity"></activity>
+        <activity android:name=".activities.ReadActivity" />
+        <activity android:name=".activities.FashionListActivity"></activity>
     </application>
 
 </manifest>
